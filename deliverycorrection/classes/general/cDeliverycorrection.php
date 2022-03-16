@@ -24,11 +24,6 @@ class cDeliverycorrection {
 
         if($newPrice) $shipment->setBasePriceDelivery($newPrice);
 
-
-        $contents=["newPrice"=>$newPrice,"shipmentPrice"=>$shipmentPrice,"deliveryID"=>$deliveryID,"orderPric"=>$orderPrice, "options"=>$options];
-        $fileContent = $_SERVER['DOCUMENT_ROOT'] . '/_logs/ServiceCalculateH-'.date("d-m-Y").'.txt';
-        file_put_contents($fileContent, print_r($contents,true), FILE_APPEND);
-
     }
 
 }
